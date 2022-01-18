@@ -488,13 +488,13 @@ img {
   padding-bottom: 6px;
   padding-right: 22px;
   padding-left: 22px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .features-portfolio-btn:hover,
 .features-portfolio-btn:focus {
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -506,7 +506,7 @@ img {
 
 .features-portfolio-btn-current {
   font-family: inherit;
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -1028,10 +1028,6 @@ img {
   transition: opasity 500ms, visibility 500ms;
 }
 
-.backdrop is-hidden .modal {
-  transform: scale(0.5);
-}
-
 .modal {
   width: 528px;
   height: 581px;
@@ -1042,8 +1038,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 500ms;
+  transform: translate(-50%, -50%);
 }
 
 .modal-close {
